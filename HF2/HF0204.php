@@ -5,17 +5,14 @@ $szinek = array('A' => 'Kek', 'B' => 'Zold', 'c' => 'Piros');
 function atalakit($tomb, $formazas) {
 
     foreach ($tomb as $kulcs => $ertek) {
-
         if ($formazas == 'kisbetus') {
             $tomb[$kulcs] = strtolower($ertek);
         } elseif ($formazas == 'nagybetus') {
             $tomb[$kulcs] = strtoupper($ertek);
         }
-
     }
 
     return $tomb;
-
 }
 
 $kisBetus = atalakit($szinek, 'kisbetus');
@@ -29,8 +26,8 @@ echo "Nagybetűs formában függvénnyel: ";
 print_r($nagyBetus);
 echo "<br>";
 
-function atalakit_map($tomb, $formazas) {
-
+function atalakit_map($tomb, $formazas)
+{
     if ($formazas === "kisbetus") {
         return array_map('strtolower', $tomb);
     } elseif ($formazas === "nagybetus") {
@@ -38,7 +35,6 @@ function atalakit_map($tomb, $formazas) {
     }
 
     return $tomb;
-
 }
 
 $kisBetusMap = atalakit_map($szinek, 'kisbetus');

@@ -9,18 +9,16 @@ $napok = array(
 $kiemeltNapok = array("K", "Cs", "Szo", "Tu", "Th", "Sa", "Di", "Do", "Sa");
 
 foreach ($napok as $nyelv => $nyelvNapok) {
-
     echo "$nyelv: ";
 
     foreach ($nyelvNapok as $nap) {
-
         if (in_array($nap, $kiemeltNapok)) {
             echo "<b>$nap</b>, ";
         } else {
             echo "$nap, ";
         }
-
     }
+
     print "<br>";
 }
 

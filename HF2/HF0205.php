@@ -5,8 +5,8 @@ $bevasarlolista = [
     ["nev" => "Viz", "mennyiseg" => 1, "egysegar" => 2.5]
 ];
 
-function hozzaad($lista, $nev, $mennyiseg, $egysegar) {
-
+function hozzaad($lista, $nev, $mennyiseg, $egysegar)
+{
     $lista[] = [
         "nev" => $nev,
         "mennyiseg" => $mennyiseg,
@@ -16,8 +16,8 @@ function hozzaad($lista, $nev, $mennyiseg, $egysegar) {
     return $lista;
 }
 
-function eltavolit($lista, $nev) {
-
+function eltavolit($lista, $nev)
+{
     foreach ($lista as $kulcs => $elem) {
         if ($elem['nev'] === $nev) {
             unset($lista[$kulcs]);
@@ -26,20 +26,18 @@ function eltavolit($lista, $nev) {
     }
 
     return array_values($lista);
-
 }
 
-function kiir($lista) {
-
+function kiir($lista)
+{
     foreach ($lista as $elem) {
         echo "<br>";
         echo "Termék: " . $elem['nev'] . ", Mennyiség: " . $elem['mennyiseg'] . ", Egységár: " . $elem['egysegar'] . " RON";
     }
-
 }
 
-function osszkoltseg($lista) {
-
+function osszkoltseg($lista)
+{
     $osszeg = 0;
 
     foreach ($lista as $elem) {
@@ -47,7 +45,6 @@ function osszkoltseg($lista) {
     }
 
     return $osszeg;
-
 }
 
 echo "<b> Alap bevásárlólista elemei: </b>" . "<br>";
